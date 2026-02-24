@@ -19,3 +19,5 @@ class BasePage:
         self.find(locator).send_keys(text)
     def clear(self,locator):
         self.find(locator).clear()
+    def get_current_url(self):
+        return self.driver.current_url
