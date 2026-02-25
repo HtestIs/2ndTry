@@ -6,6 +6,7 @@ class SecureAreaPage(BasePage):
     LOGOUT_BUTTON = (By.CSS_SELECTOR,"#content > div > a")
     def get_success_message(self):
         self.wait_visible(self.SUCCESS_MESSAGE)
+        self.wait_url_contains("secure")
         return self.find(self.SUCCESS_MESSAGE).text
     def click_logout(self):
         from pages.login import Herokyu
