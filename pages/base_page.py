@@ -8,6 +8,8 @@ class BasePage:
         self.wait = WebDriverWait(driver,10)
     def wait_visible(self, locator):
         self.wait.until(EC.visibility_of_element_located(locator))
+    def wait_invisible(self,locator):
+        self.wait.until(EC.invisibility_of_element_located(locator))
     def wait_clickable(self,locator):
         self.wait.until(EC.element_to_be_clickable(locator))
     def url(self, url):
